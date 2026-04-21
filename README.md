@@ -41,6 +41,7 @@ Mended Minds aims to address this issue by providing a simple, calming, and inte
 - MySQL
 ---
 
+'''text
 ## Project Structure
 Mended-Minds/
 ├── app.py
@@ -73,3 +74,4 @@ Mended-Minds/
     ├── booking.png
     ├── bg1.png
     └── support.png
+'''
