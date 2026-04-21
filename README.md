@@ -12,8 +12,7 @@ Mended Minds aims to address this issue by providing a simple, calming, and inte
 - Provide a safe platform for emotional expression
 - Enables users to track their daily moods
 - Offer **sound healing tools** for relaxation and stress relief
-- Provide **guided meditation sessions** to improve mental calmness
-- Introduce **calming games and activities** to reduce anxiety
+- Provide **meditation sessions** to improve mental calmness
 - Build **community support features** for shared healing and encouragement
 - Facilitate access to **one-on-one counselling support**
 - Promote mental health awareness in an ethical and responsible manner
@@ -24,10 +23,8 @@ Mended Minds aims to address this issue by providing a simple, calming, and inte
 - Mood Check-In system
 - Sound healing and relaxation audio
 - Meditation guidance
-- Calming games for stress relief
 - Community support section
 - One-on-One counselling request module
-- Emotional support chat API
 - Secure data storage using MySQL
 ---
 
