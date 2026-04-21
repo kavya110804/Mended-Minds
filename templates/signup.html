@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — Mended Minds</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card fade-in-up">
+
+      <div class="auth-logo">
+        <h2>Mended Minds</h2>
+        <p>Create your account to begin your wellness journey</p>
+      </div>
+
+      <div id="signup-alert" class="alert"></div>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="e.g. Kavya Sharma">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="e.g. kavya_2024">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 6 characters">
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" placeholder="Repeat your password">
+      </div>
+
+      <button class="btn btn-primary btn-full mt-md" id="signup-btn" onclick="signup()">
+        Create Account
+      </button>
+
+      <div class="auth-switch">
+        Already have an account? <a href="http://127.0.0.1:5000/login">Log in</a>
+      </div>
+
+    </div>
+  </div>
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>

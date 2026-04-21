@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Therapy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body class="sound-page">
+    <div class="navbar">
+      <a href="/dashboard" class="navbar-brand" >Mended Minds</a>
+      <div class="navbar-links">
+        <a href="http://127.0.0.1:5000/dashboard">Dashboard</a>
+      </div>
+    </div>
+
+  <h1 style="margin-top: 30px;">🎧 Sound Therapy</h1>
+  <p class="sound-subtitle">Press play. Close your eyes. Follow the circle.</p>
+
+  <!-- Circular Breathing Guide -->
+  <div class="breath-container">
+    <div class="breath-circle">
+      <p id="breathText">Press Play</p>
+    </div>
+  </div>
+
+  <!-- Square Audio Cards -->
+  <div class="sound-grid">
+    
+    <div class="sound-card">
+      <div class="sound-emoji">🌳</div>
+      <h3>Nature</h3>
+      <audio id="audio1" loop src="/static/audio/nature.mp3"></audio>
+      <button class="sound-btn" onclick="toggleAudio('audio1', this)">▶ Play</button>
+    </div>
+
+    <div class="sound-card">
+      <div class="sound-emoji">🌊</div>
+      <h3>Ocean</h3>
+      <audio id="audio2" loop src="/static/audio/ocean.mp3"></audio>
+      <button class="sound-btn" onclick="toggleAudio('audio2', this)">▶ Play</button>
+    </div>
+
+    <div class="sound-card">
+      <div class="sound-emoji">🎵</div>
+      <h3>Alpha</h3>
+      <audio id="audio3" loop src="/static/audio/alpha.mp3"></audio>
+      <button class="sound-btn" onclick="toggleAudio('audio3', this)">▶ Play</button>
+    </div>
+
+  </div>
+
+  <script src="/static/js/sound-therapy.js"></script>
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>

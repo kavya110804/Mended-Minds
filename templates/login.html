@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Mended Minds</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card fade-in-up">
+
+      <div class="auth-logo">
+        <h2>Welcome Back</h2>
+        <p>Log in to continue your wellness journey</p>
+      </div>
+
+      <div id="login-alert" class="alert"></div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+      </div>
+
+      <button class="btn btn-primary btn-full mt-md" id="login-btn" onclick="login()">
+        Login
+      </button>
+
+      <div class="auth-switch">
+        Don't have an account? <a href="/signup">Sign Up</a>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') login();
+    });
+  </script>
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>

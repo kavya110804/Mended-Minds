@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Tracker — Mended Minds</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-card">
+    
+    <div class="navbar">
+      <a href="/dashboard" class="navbar-brand">Mended Minds</a>
+      <div class="navbar-links">
+        <a href="http://127.0.0.1:5000/dashboard">Dashboard</a>
+      </div>
+    </div>
+    <h2 class="text-center">Log Your Mood 😊</h2>
+    <h3 class="text-center mt-md">How are you feeling today?</h3>
+
+    <div id="mood-container" class="mood-grid"></div>
+
+    <div class="form-group mt-lg">
+      <label>Write how you feel (optional)</label>
+      <input type="text" id="note" placeholder="You can express anything freely 💙">
+    </div>
+
+    <button class="btn btn-primary btn-full mt-md" onclick="saveMood()">
+      Save Mood
+    </button>
+
+    <div class="card mt-lg">
+      <h3>Your Mood This Month</h3>
+      <div id="monthly-mood"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/js/mood.js"></script>
+<script src="/static/js/auth.js"></script>
+</body>
+</html>

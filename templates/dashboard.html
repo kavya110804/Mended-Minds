@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Mended Minds</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body>
+  <script src="/static/js/auth.js"></script>
+  <script>requireLogin();</script>
+
+  <nav class="navbar">
+    <a href="/dashboard" class="navbar-brand" >Mended Minds</a>
+    <ul class="navbar-links">
+      <li style="color:var(--color-beige); font-size:0.9rem;">
+        👋 Hello, <span id="user-name">User</span>
+      </li>
+      <li>
+        <button onclick="logout()" class="btn btn-outline"
+          style="color:white; border-color:rgba(255,255,255,0.4); padding:8px 18px; font-size:0.85rem;">
+          Logout
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <p style="color:rgba(255,255,255,0.4); font-size:0.75rem; letter-spacing:1px; text-transform:uppercase; padding:0 var(--space-md);">
+        Navigation
+      </p>
+      <ul class="sidebar-nav">
+        <li><a href="/dashboard" class="active">🏠 Dashboard</a></li>
+        <li><a href="/mood">😊 Mood Tracker</a></li>
+        <li><a href="/booking">📅 Book Counselling</a></li>
+        <li><a href="/support">🤝 Support Groups</a></li>
+        <li><a href="/sound-therapy">🎵 Sound Therapy</a></li>
+      </ul>
+      <hr style="border-color:rgba(255,255,255,0.1); margin:var(--space-lg) var(--space-md);">
+      <ul class="sidebar-nav">
+        <li><a href="#" onclick="logout()" style="color:rgba(255,100,100,0.8);">🚪 Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="dashboard-main">
+      <div class="dashboard-welcome fade-in-up">
+        <h2>Good to see you, <span id="user-name-2" style="color:var(--color-accent);">there</span>! 🌱</h2>
+        <p>Here's an overview of your wellness journey.</p>
+      </div>
+
+      <div class="stats-grid fade-in-up-delay-1">
+        <div class="stat-card">
+          <div class="stat-number">—</div>
+          <div class="stat-label">Day Mood Streak</div>
+        </div>
+        <div class="stat-card" style="border-left-color:var(--color-purple);">
+          <!-- sessions count will be filled by dashboard.js -->
+          <div class="stat-number" id="session-count">—</div>
+          <div class="stat-label">Sessions Booked</div>
+        </div>
+        <div class="stat-card" style="border-left-color:#2e7d32;">
+          <div class="stat-number">—</div>
+          <div class="stat-label">Average Mood This Week</div>
+        </div>
+      </div>
+
+      <h3 class="fade-in-up-delay-2" style="margin-bottom:var(--space-md);">Quick Actions</h3>
+      <div class="services-grid fade-in-up-delay-2" style="margin-bottom:var(--space-xl);">
+        <a href="/mood" class="card service-card" style="text-decoration:none;">
+          <div class="service-icon">😊</div>
+          <h4>Log Today's Mood</h4>
+          <p style="font-size:0.85rem; margin-top:var(--space-xs);">Track how you're feeling today</p>
+        </a>
+        <a href="/booking" class="card service-card" style="text-decoration:none;">
+          <div class="service-icon">📅</div>
+          <h4>Book a Session</h4>
+          <p style="font-size:0.85rem; margin-top:var(--space-xs);">Schedule with a counsellor</p>
+        </a>
+        <a href="/sound-therapy" class="card service-card" style="text-decoration:none;">
+          <div class="service-icon">🎵</div>
+          <h4>Sound Therapy</h4>
+          <p style="font-size:0.85rem; margin-top:var(--space-xs);">Relax with healing sounds</p>
+        </a>
+        <a href="/support" class="card service-card" style="text-decoration:none;">
+          <div class="service-icon">🤝</div>
+          <h4>Support Groups</h4>
+          <p style="font-size:0.85rem; margin-top:var(--space-xs);">Connect with the community</p>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Load dashboard.js AFTER auth.js so token is available -->
+  <script src="/static/js/dashboard.js"></script>
+
+  <script>
+    loadUserName();
+    const name2 = document.getElementById("user-name-2");
+    if (name2) name2.textContent = localStorage.getItem("mm_user_name") || "there";
+  </script>
+  <script>loadDashboardStats();</script>
+</body>
+</html>

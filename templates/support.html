@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>Community Support</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/png" href="/static/bg1.png">
+</head>
+<body class="support-page">
+  <div class="navbar">
+    <a href="/dashboard" class="navbar-brand" >Mended Minds</a>
+    <div class="navbar-links">
+      <a href="http://127.0.0.1:5000/dashboard">Dashboard</a>
+    </div>
+  </div>
+
+  <h1> Community Support</h1>
+
+  <div class="support-intro">
+    <div class="support-text">
+      <h2>You're not alone. Let's connect offline!</h2>
+      <br>
+      <p style="font-size: x-large;">Join a local circle. Breathe together, play together, or just talk with people who truly get it.</p>
+      <br>
+      <p style="font-size: x-large;">
+        We’ll notify you about safe, curated gatherings near you. Whether you’re in the mood for a silent guided meditation in the park, a low-pressure board game night, or a casual coffee chat with peers who’ve walked a similar path—there’s a seat waiting for you.
+      </p>
+    </div>
+    <div class="support-image">
+      <img src="/static/support.png" alt="Community Support Circle">
+    </div>
+  </div>
+    
+
+  <!-- Announcements Section -->
+  <div class="support-page">
+    <h2>📢 Announcements</h2>
+    <div id="announcement-container" class="announcement-container"></div>
+  </div>
+
+  <script src="/static/js/support.js"></script>
+  <script src="/static/js/auth.js"></script>
+</body>
+</html>
